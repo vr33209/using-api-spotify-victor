@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+text-decoration: none;
+cursor: pointer;
+color: black;
+
+&:visited {
+  color: inherit;
+}
+}
