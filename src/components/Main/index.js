@@ -5,7 +5,9 @@ import React from 'react';
 export default function Main() {
   return (
     <main className="main">
-      content
+      <div className="container">
+        <h1>container</h1>
+      </div>
     </main>
   );
 }

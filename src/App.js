@@ -12,11 +12,11 @@ function App() {
   }, [])
 
   return (
-    <div className="app">
+    <>
      <Header token={token}/>
-     <SideBard/>
+     {/* <SideBard/> */}
      <Main/>
-    </div>
+    </>
   );
 }
 

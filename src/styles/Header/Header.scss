@@ -2,11 +2,9 @@
   display: flex;
   width: 100%;
   height: 60px;
-  background: #000;
-  justify-content: space-between;
+  background: linear-gradient(90deg, #FBB040 0%, #F99F38 9.71%, #F5882E 25.93%, #F37627 42.75%, #F16824 60.2%, #F05F22 78.7%, #F05C22 100%);  justify-content: space-between;
   align-items: center;
   position: fixed;
-  grid-area: header;
   h1{
     color:#FFF
   }
