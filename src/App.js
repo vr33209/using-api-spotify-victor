@@ -1,23 +1,14 @@
-import React, { useState} from 'react';
-import Header from './components/Header'
-import SideBard from './components/Sidebar'
-import Main from './components/Main'
-import { authorizationApi } from './helpers/callToApi'
-function App() {
-  const [token] = useState(window.localStorage.getItem('token') || window.location.hash.substr(14))
-
-  useState(() => {
-    window.location.hash = "";
-    token ? window.localStorage.setItem('token', token) : authorizationApi()
-  }, [])
-
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+export default function App() {
   return (
     <>
-     <Header token={token}/>
-     {/* <SideBard/> */}
-     <Main/>
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/" exact component={Login} />
+        </Switch>
     </>
-  );
+  )
 }
-
-export default App;
