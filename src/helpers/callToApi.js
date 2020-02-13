@@ -14,6 +14,8 @@ const clientID = `client_id=${client_id}`
 const redirect_uri = `redirect_uri=http://localhost:3000/home`
 const scope = `scope=user-read-private user-read-email`
 const responseType = `response_type=token`
+  window.localStorage.removeItem('token')
+
   return window.location = `${url}/?${clientID}&${redirect_uri}&${scope}&${responseType}`
 }
 

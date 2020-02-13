@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useCallback } from 'react';
 import { getTrackers, authorizationApi } from '../../helpers/callToApi';
 import { Trackers } from '../../helpers/trackersContext';
 
@@ -11,12 +11,9 @@ export default function Main() {
     token ? window.localStorage.setItem('token', token) : authorizationApi()
   }, [])
 
-
   useEffect(()=> {
     getTrackers(setTrackers)
-  },[])
-
-  console.log(trackers)
+  },[setTrackers])
 
   return (
     <main className="main">
